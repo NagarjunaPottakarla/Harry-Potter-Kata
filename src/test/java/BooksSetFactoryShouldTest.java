@@ -36,6 +36,19 @@ public class BooksSetFactoryShouldTest {
         assertThat(booksSets.get(0).getBooks().size(), is(4));
     }
 
+    @Test
+    public void extract_two_set_of_4_books_when_cart_items_are_two_copies_for_first_three_books_and_one_for_rest(){
+
+        List<ShoppingCartItem> shoppingCartItems = GivenAShoppingCartItems(2,2,2,1,1);
+
+        List<BooksSet> booksSets = booksSetFactory.getDifferentBooksSetsWithMaxTotalDiscount(shoppingCartItems);
+
+        assertThat(booksSets.size(), is(2));
+        assertThat(booksSets.get(0).getBooks().size(), is(4));
+        assertThat(booksSets.get(1).getBooks().size(), is(4));
+
+    }
+
     
 	private List<ShoppingCartItem> GivenAShoppingCartItems(int quantityBookI, int quantityBookII, int quantityBookIII,
 			int quantityBookIV, int quantityBookV) {
