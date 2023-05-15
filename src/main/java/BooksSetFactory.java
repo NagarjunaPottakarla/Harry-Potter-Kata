@@ -17,6 +17,5 @@ public class BooksSetFactory {
         return optimizeSetList;
     }
     
-    
 
 }

@@ -24,7 +24,6 @@ public class Book {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-
 	public boolean equals(Object o) {
 		if (o == null)
 			return false;

@@ -41,7 +41,7 @@ public class BooksSetFactoryShouldTest {
 			int quantityBookIV, int quantityBookV) {
 		List<ShoppingCartItem> shoppingCartItems = new ArrayList();
 
-		if (quantityBookI > 0)
+		if (quantityBookI > 0)	
 			shoppingCartItems.add(new ShoppingCartItem(GivenAHarryPotterIBook(), quantityBookI));
 
 		if (quantityBookII > 0)
@@ -58,4 +58,5 @@ public class BooksSetFactoryShouldTest {
 
 		return shoppingCartItems;
 	}
+	
 }
