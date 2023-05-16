@@ -66,9 +66,9 @@ public class ShoppingCartShouldTest {
     @Test
     public void have_10_percent_of_discount_when_buy_three_different_copies(){
 
-        Book harryPotterI = Catalog.GivenAHarryPotterIBook();
-        Book harryPotterII = Catalog.GivenAHarryPotterIIBook();
-        Book harryPotterIII = Catalog.GivenAHarryPotterIIIBook();
+        Book harryPotterI = GivenAHarryPotterIBook();
+        Book harryPotterII = GivenAHarryPotterIIBook();
+        Book harryPotterIII =GivenAHarryPotterIIIBook();
 
         shoppingCart.Add(harryPotterI);
         shoppingCart.Add(harryPotterII);
@@ -78,4 +78,21 @@ public class ShoppingCartShouldTest {
         assertThat(shoppingCart.getTotalPrice(), is(21.60));
 
     }
+    @Test
+    public void have_20_percent_of_discount_when_buy_four_different_copies(){
+
+        Book harryPotterI = GivenAHarryPotterIBook();
+        Book harryPotterII = GivenAHarryPotterIIBook();
+        Book harryPotterIII = GivenAHarryPotterIIIBook();
+        Book harryPotterIV = GivenAHarryPotterIVBook();
+
+        shoppingCart.Add(harryPotterI);
+        shoppingCart.Add(harryPotterII);
+        shoppingCart.Add(harryPotterIII);
+        shoppingCart.Add(harryPotterIV);
+
+        assertThat(shoppingCart.getTotalPrice(), is(25.60));
+
+    }
+
 }
