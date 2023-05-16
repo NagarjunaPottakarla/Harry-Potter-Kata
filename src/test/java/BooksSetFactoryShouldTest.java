@@ -47,10 +47,6 @@ public class BooksSetFactoryShouldTest {
         assertThat(booksSets.get(0).getBooks().size(), is(4));
         assertThat(booksSets.get(1).getBooks().size(), is(4));
     }
-
-	
-
-    
 	private List<ShoppingCartItem> GivenAShoppingCartItems(int quantityBookI, int quantityBookII, int quantityBookIII,
 			int quantityBookIV, int quantityBookV) {
 		List<ShoppingCartItem> shoppingCartItems = new ArrayList();
@@ -71,6 +67,5 @@ public class BooksSetFactoryShouldTest {
 			shoppingCartItems.add(new ShoppingCartItem(GivenAHarryPotterVBook(), quantityBookV));
 
 		return shoppingCartItems;
-	}
-	
+	}	
 }

@@ -29,6 +29,4 @@ public class CatalogTest {
 
         return book;
     }
-
-    
 }

@@ -11,7 +11,6 @@ public class ShoppingCart {
     public ShoppingCart(PriceCalculator priceCalculator){
         this.priceCalculator = priceCalculator;
     }
-
     public void Add(Book book) {
 
         ShoppingCartItem existedItem = null;
@@ -34,6 +33,4 @@ public class ShoppingCart {
     public interface PriceCalculator {
         Double calculate(List<ShoppingCartItem> shoppingCartItems);
     }
-	
-	
 }
