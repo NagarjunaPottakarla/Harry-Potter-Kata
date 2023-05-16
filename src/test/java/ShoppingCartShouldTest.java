@@ -1,8 +1,13 @@
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Test;
 
+import cart.Book;
 import cart.ShoppingCart;
 import price.BooksSetDiscount;
 import price.BooksSetFactory;
@@ -22,5 +27,15 @@ public class ShoppingCartShouldTest {
 
         BooksSetFactory booksSetFactory = new BooksSetFactory(byDifferentCopiesDiscountList);
         shoppingCart = new ShoppingCart(new PriceCalculatorByBooksSetDiscount(booksSetFactory));
+    }
+    @Test
+    public void have_normal_price_when_buy_one_copy(){
+
+        Book harryPotterI = Catalog.GivenAHarryPotterIBook();
+
+        shoppingCart.Add(harryPotterI);
+
+        assertThat(shoppingCart.getTotalPrice(), is(8.0));
+
     }
 }
