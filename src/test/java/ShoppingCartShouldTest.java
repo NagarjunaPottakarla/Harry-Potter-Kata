@@ -128,5 +128,29 @@ public class ShoppingCartShouldTest {
         assertThat(shoppingCart.getTotalPrice(), is(29.6));
 
     }
+    @Test
+    public void have_40_percent_of_discount_when_buy_two_set_of_4_different_copies(){
+
+        Book harryPotterI = GivenAHarryPotterIBook();
+        Book anotherHarryPotterI = GivenAHarryPotterIBook();
+        Book harryPotterII = GivenAHarryPotterIIBook();
+        Book anotherHarryPotterII = GivenAHarryPotterIIBook();
+        Book harryPotterIII = GivenAHarryPotterIIIBook();
+        Book anotherHarryPotterIII = GivenAHarryPotterIIIBook();
+        Book harryPotterIV = GivenAHarryPotterIVBook();
+        Book harryPotterV = GivenAHarryPotterVBook();
+
+        shoppingCart.Add(harryPotterI);
+        shoppingCart.Add(anotherHarryPotterI);
+        shoppingCart.Add(harryPotterII);
+        shoppingCart.Add(anotherHarryPotterII);
+        shoppingCart.Add(harryPotterIII);
+        shoppingCart.Add(anotherHarryPotterIII);
+        shoppingCart.Add(harryPotterIV);
+        shoppingCart.Add(harryPotterV);
+
+        assertThat(shoppingCart.getTotalPrice(), is(51.20));
+
+    }
 
 }
