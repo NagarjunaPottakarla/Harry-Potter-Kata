@@ -67,6 +67,5 @@ public class BooksSetFactoryShouldTest {
 			shoppingCartItems.add(new ShoppingCartItem(GivenAHarryPotterVBook(), quantityBookV));
 
 		return shoppingCartItems;
-	}
-	
+	}	
 }

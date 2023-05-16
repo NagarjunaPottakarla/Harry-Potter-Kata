@@ -23,5 +23,4 @@ public class ShoppingCartShouldTest {
         BooksSetFactory booksSetFactory = new BooksSetFactory(byDifferentCopiesDiscountList);
         shoppingCart = new ShoppingCart(new PriceCalculatorByBooksSetDiscount(booksSetFactory));
     }
-    
 }
