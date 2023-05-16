@@ -46,7 +46,6 @@ public class BooksSetFactoryShouldTest {
         assertThat(booksSets.size(), is(2));
         assertThat(booksSets.get(0).getBooks().size(), is(4));
         assertThat(booksSets.get(1).getBooks().size(), is(4));
-
     }
 
     
