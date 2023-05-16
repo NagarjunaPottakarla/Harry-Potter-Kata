@@ -50,4 +50,17 @@ public class ShoppingCartShouldTest {
 
     }
 
+    @Test
+    public void have_5_percent_of_discount_when_buy_two_different_copies(){
+
+        Book harryPotterI = GivenAHarryPotterIBook();
+        Book harryPotterII =GivenAHarryPotterIIBook();
+
+        shoppingCart.Add(harryPotterI);
+        shoppingCart.Add(harryPotterII);
+
+        assertThat(shoppingCart.getTotalPrice(), is(15.20));
+
+    }
+
 }
