@@ -33,5 +33,4 @@ public class ShoppingCart {
     public interface PriceCalculator {
         Double calculate(List<ShoppingCartItem> shoppingCartItems);
     }
-    
 }

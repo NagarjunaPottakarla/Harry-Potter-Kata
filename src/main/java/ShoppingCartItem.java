@@ -19,6 +19,5 @@ public class ShoppingCartItem {
 
     public void changeQuantity(int quantity) {
         this.quantity = quantity;
-    }
-    
+    }  
 }
