@@ -31,11 +31,23 @@ public class ShoppingCartShouldTest {
     @Test
     public void have_normal_price_when_buy_one_copy(){
 
-        Book harryPotterI = Catalog.GivenAHarryPotterIBook();
+        Book harryPotterI = GivenAHarryPotterIBook();
 
         shoppingCart.Add(harryPotterI);
 
         assertThat(shoppingCart.getTotalPrice(), is(8.0));
 
     }
+    @Test
+    public void have_normal_price_when_buy_two_copies_of_the_same_book(){
+
+        Book harryPotterI = GivenAHarryPotterIBook();
+
+        shoppingCart.Add(harryPotterI);
+        shoppingCart.Add(harryPotterI);
+
+        assertThat(shoppingCart.getTotalPrice(), is(16.0));
+
+    }
+
 }
