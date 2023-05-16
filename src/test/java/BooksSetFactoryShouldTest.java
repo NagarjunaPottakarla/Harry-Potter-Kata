@@ -48,6 +48,8 @@ public class BooksSetFactoryShouldTest {
         assertThat(booksSets.get(1).getBooks().size(), is(4));
     }
 
+	
+
     
 	private List<ShoppingCartItem> GivenAShoppingCartItems(int quantityBookI, int quantityBookII, int quantityBookIII,
 			int quantityBookIV, int quantityBookV) {
